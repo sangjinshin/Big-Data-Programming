@@ -1,0 +1,9 @@
+brown	{"document_count": 198204, "total_count": 1000424, "min": 1, "max": 19, "sum_of_squares": 6107610, "mean": 5.047446065669714, "variance": 5.338054818260186}
+dog	{"document_count": 198212, "total_count": 999056, "min": 1, "max": 18, "sum_of_squares": 6089358, "mean": 5.0403406453696045, "variance": 5.316405849290781}
+fox	{"document_count": 198193, "total_count": 999223, "min": 1, "max": 18, "sum_of_squares": 6093543, "mean": 5.04166645643388, "variance": 5.327099939971486}
+jumped	{"document_count": 198215, "total_count": 999551, "min": 1, "max": 18, "sum_of_squares": 6094985, "mean": 5.042761647705774, "variance": 5.31991802978607}
+lazy	{"document_count": 198145, "total_count": 998848, "min": 1, "max": 20, "sum_of_squares": 6092570, "mean": 5.040995230765349, "variance": 5.336405136342034}
+over	{"document_count": 198183, "total_count": 999113, "min": 1, "max": 18, "sum_of_squares": 6086731, "mean": 5.041365808369033, "variance": 5.297310481236988}
+quick	{"document_count": 198220, "total_count": 999428, "min": 1, "max": 17, "sum_of_squares": 6089408, "mean": 5.042013923922914, "variance": 5.298547613972204}
+sir	{"document_count": 198133, "total_count": 999821, "min": 1, "max": 19, "sum_of_squares": 6102173, "mean": 5.046211383262758, "variance": 5.334118438497605}
+the	{"document_count": 199960, "total_count": 1997644, "min": 1, "max": 28, "sum_of_squares": 22335706, "mean": 9.990218043608722, "variance": 11.896413615189516}

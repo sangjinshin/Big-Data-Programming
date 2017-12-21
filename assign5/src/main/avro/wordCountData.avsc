@@ -1,0 +1,7 @@
+{"namespace": "com.sangjinshin.cs378.assign5",
+ "type": "record",
+ "name": "WordCountData",
+ "fields": [
+     {"name": "count", "type": "long"}
+ ]
+}
