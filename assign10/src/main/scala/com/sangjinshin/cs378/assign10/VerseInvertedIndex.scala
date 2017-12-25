@@ -37,9 +37,9 @@ object VerseInvertedIndex {
             word => (word, List(id)) // Transform word to word and verse ID
           }
       }
-      .persist(StorageLevel.DISK_ONLY) // Persist the data to avoid computing RDD multiple times
       .reduceByKey(_.union(_)) // Combine all verse ID's with same key (word)
       .sortByKey() // Sort index by key (word)
+      .persist(StorageLevel.MEMORY_ONLY) // Persist the data to avoid computing RDD multiple times
       .collect { // Remove duplicates, sort the List of verse ID's in lexicographical order
         case (word, _idList) =>
           (word, _idList.distinct.sortBy {
@@ -58,8 +58,8 @@ object VerseInvertedIndex {
             word => (word, List(id)) // Transform word to word and verse ID
           }
       }
-      .persist(StorageLevel.DISK_ONLY) // Persist the data to avoid computing RDD multiple times
       .reduceByKey(_.union(_)) // Combine all verse ID's with same key (word)
+      .persist(StorageLevel.MEMORY_ONLY) // Persist the data to avoid computing RDD multiple times
       .collect { // Remove duplicates, sort the List of verse ID's in lexicographical order
         case (word, _idList) =>
           (word, _idList.distinct.sortBy {
@@ -76,6 +76,10 @@ object VerseInvertedIndex {
       }
       .saveAsTextFile(outputDir2)
 
+    // Clear RDD stored in memory
+    inputRDD.unpersist()
+
+    // Shut down Spark Context
     sc.stop()
 
   }
