@@ -54,7 +54,6 @@ object UserSessions {
           ((userId, city), List(event))
       }
       .partitionBy(new SessionCityPartitioner(6)) // Partition user sessions by city using a custom partitioner; 6 partitions
-      .persist(StorageLevel.MEMORY_ONLY) // Persist the data to avoid computing RDD multiple times
       .reduceByKey(_.union(_).distinct) // Combine events by key (userId, city) tuple and remove duplicates
       .filter { // Sample SHOWER sessions at a rate of 1 in 10; keep all non-SHOWER sessions
         case ((userId, city), _eventList) =>
@@ -87,6 +86,7 @@ object UserSessions {
         case ((userId, city), _eventList) =>
           (userId, city)
       }
+      .persist(StorageLevel.MEMORY_ONLY) // Persist the data to avoid computing RDD multiple times
       .collect {
         case ((userId, city), _eventList) =>
           numSessions.add(1)
