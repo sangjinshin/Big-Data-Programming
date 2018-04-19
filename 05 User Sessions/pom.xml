@@ -19,7 +19,7 @@
 		<!-- AVRO version -->
 		<avro.version>1.8.2</avro.version>
 		<!-- guava collections version -->
-		<guava.version>23.0</guava.version>
+		<guava.version>24.1-jre</guava.version>
 		<!-- mrunit version -->
 		<mrunit.version>1.1.0</mrunit.version>
 		<!-- mockito version -->
