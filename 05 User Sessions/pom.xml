@@ -14,7 +14,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- AWS designation: - - emr 5.8.0 -->
-		<hadoop-common.version>3.1.1</hadoop-common.version>
+		<hadoop-common.version>3.2.0</hadoop-common.version>
 		<hadoop-core.version>3.1.1</hadoop-core.version>
 		<!-- AVRO version -->
 		<avro.version>1.8.2</avro.version>
